@@ -11,16 +11,16 @@ const Lonely = ({ activeUserImage, likedUsers, superLikedUsers }) => (
 
     <div id="liked-people">
       <p>
-        {likedUsers.length > 0
-          ? "People you liked...let's hope they like you too!"
-          : ''}
+       People Who Liked You!!! = {likedUsers.length}
       </p>
 
       {likedUsers.map(item => (
         <LikedPerson key={item.id} person={item} />
       ))}
 
-      <p>{superLikedUsers.length > 0 ? 'People you  Disliked!' : ''}</p>
+      <p>
+        People Who Disliked You!!! = {superLikedUsers.length}
+      </p>
 
       {superLikedUsers.map(item => (
         <LikedPerson key={item.id} person={item} />
